@@ -1,0 +1,22 @@
+{
+  "name": "tutorial-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hungryYang/tutorial-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hungryYang/tutorial-node/issues"
+  },
+  "homepage": "https://github.com/hungryYang/tutorial-node#readme",
+  "dependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
