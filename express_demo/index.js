@@ -55,9 +55,13 @@ app.use((err,req,res,next)=>{
   res.end(err)
 })
 
+/*
+* use 中间件 本身是对请求或流程处理的一种分装 赋值有顺序性
+* 调用next会把处理权交给下一个中间件
+* next('字符串')会进行错误处
+* 如果是next('router')会直接走到下一个router中
+*/
 
-//use 中间件 本身是对请求或流程处理的一种分装 赋值有顺序性
-//调用next会把处理权交给下一个中间件
 // app.use((req,res,next)=>{
 //   req.yang = 1
 //   console.log(`req.yang2： ${req.yang2}`)
