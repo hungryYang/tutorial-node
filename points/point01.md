@@ -1,0 +1,15 @@
+# MVC模式
+
+MVC模式是为了解决应用开发中代码增加后变得难以维护和复用的问题而被提出来的一种解决方案
+Model为模型，自身含有数据结构以及数据结构相关的逻辑，如用户的管理，状态的改变和维护等等，通常还需要解决与数据库之间如何高效通信的问题
+View为视图，体现为最终展现给用户（广义，比如客户端）的形式，View根据一个或者多个Model的数据进行展示
+Controller为控制器，负责接收用户请求，操作或提取model并最终交由view渲染
+
+# Express中的MVC
+
+其中，由于express的特点，根据设置，views目录下的文件会被模板引擎在调用res.render('view_name')的时候自动渲染
+view层可以理解为模板引擎+views文件夹中的文件
+而routes可以理解为controller，负责根据用户的请求，调取相关的service，最终得到model并用于渲染
+models则代表了model和相关逻辑
+services则有些特别，由于同层model之间解耦的需要，单个model往往不应该包含太多对其他model的操作，我们应该在services中对一系列逻辑上有关的model进行统一操作
+
